@@ -1,0 +1,45 @@
+<div class="member-slide main-slide fl">
+	<h3><a href="seller.html" title="">商家中心</a></h3>
+	<dl>
+		<dd>
+			<a class="first" href="javascript:;" title="">店铺管理</a>
+			<div class="f-cb">
+				<ul>
+					<li><a href="seller_set.html" title="">店铺设置</a></li>
+					<li><a href="seller_upload.html" title="">上传商品</a></li>
+					<li><a href="seller_goods.html" title="">商品列表</a></li>
+					<li><a href="seller_bill.html" title="">账单结算</a></li>
+					<li><a href="seller_staff.html" title="">我的员工</a></li>
+					<li><a href="seller_message.html" title="">留言管理</a></li>
+				</ul>
+			</div>
+		</dd>
+		<dd>
+			<a class="first" href="javascript:;" title="">订单管理</a>
+			<div class="f-cb">
+				<ul>
+					<li><a href="seller_order.html " title="">我的订单</a></li>
+					<li><a href="seller_refund.html" title="">我的售后</a></li>
+					<li><a href="seller_evaluate.html" title="">评价管理</a></li>
+					<li><a href="seller_count.html" title="">销售统计</a></li>
+				</ul>
+			</div>
+		</dd>
+		<dd>
+			<a class="first" href="javascript:;" title="">账号管理</a>
+			<div class="f-cb">
+				<ul>
+					<li><a href="seller_change.html" title="">修改密码</a></li>
+				</ul>
+			</div>
+		</dd>
+		<dd>
+			<a class="first" href="member.html" title="">会员中心</a>
+		</dd>
+	</dl>
+</div>
+<script>
+	$('.main-slide dd .first').click(function(){
+		$(this).parent('dd').find('ul').slideToggle()
+	})
+</script>

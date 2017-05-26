@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="zh-CN" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>鱼多吉</title>
+<link href="img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jQuery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/bocfe.js"></script>
+    <script src="js/plug.preload.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shavera.css">
+    <script src="lightbox/jquery.lightbox-0.5.js"></script>
+    <link rel="stylesheet" href="lightbox/jquery.lightbox-0.5.css">
+    <script src="js/main.js"></script>
+<!--[if IE 6]>
+    <?php
+        echo static_file('IE6PNG.js');
+    ?>
+    <script type="text/javascript">
+        IE6PNG.fix('.png');
+    </script>
+<![endif]-->
+    <script src="js/laydate.js"></script>
+</head>
+
+<body>
+    <div class="includeDom" include='inc/header.html'></div>
+    <div class="main-bg">
+        <div class="w1200 f-cb">
+            <div class="includeDom" include='inc/member_slide.html'></div>
+            <div class="main-right fr">
+                <div class="order-main member-main complain-main">
+                    <div class="main-title">
+                        <h3>我的投诉</h3>
+                    </div>
+                    <form class="found" action="">
+                        <p>订单号：</p><input class="input1" type="text">
+                        <p class="nbsp"></p>
+                        <p>购买日期：</p><input class="start" value="" onclick="laydate()"><em>-</em><input class="start" value="" onclick="laydate()">
+                        <input type="submit" class="submit" value="查询">
+                    </form>
+                    <div class="con">
+                        <table>
+                            <tr>
+                                <th width="110" class="thl">服务类型</th>
+                                <th width="180">订单编号</th>
+                                <th width="93">联系人</th>
+                                <th width="104">下单时间</th>
+                                <th width="154">店铺名称</th>
+                                <th width="85">总金额</th>
+                                <th width="100">交易状态</th>
+                                <th width="105" class="thr">操作</th>
+                            </tr>
+                            <tr>
+                                <td>安装鱼缸</td>
+                                <td>1220462282214287</td>
+                                <td>王大锤</td>
+                                <td>2015-12-12</td>
+                                <td>杭州鱼多吉旗舰店</td>
+                                <td><em>¥800.00</em></td>
+                                <td><p>投诉中</p></td>
+                                <td><a class="cancel" href="member_complain_two.html" title="">投诉详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>安装鱼缸</td>
+                                <td>1220462282214287</td>
+                                <td>王大锤</td>
+                                <td>2015-12-12</td>
+                                <td>杭州鱼多吉旗舰店</td>
+                                <td><em>¥800.00</em></td>
+                                <td><p>投诉完成</p></td>
+                                <td><a class="cancel" href="member_complain_success.html" title="">投诉详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>安装鱼缸</td>
+                                <td>1220462282214287</td>
+                                <td>王大锤</td>
+                                <td>2015-12-12</td>
+                                <td>杭州鱼多吉旗舰店</td>
+                                <td><em>¥800.00</em></td>
+                                <td><p>投诉失败</p></td>
+                                <td><a class="cancel" href="member_complain_fail.html" title="">投诉详情</a></td>
+                            </tr>
+                        </table>
+                        <div class="page">
+                            <img src="img/page.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="includeDom" include='inc/footer.html'></div>
+<script>
+$(function(){
+    $('.main-slide dd:eq(1) .first').addClass('on');
+    $('.main-slide dd:eq(1) li:eq(2) a').addClass('on');
+    $('.main-slide dd:eq(1) ul').css('display','block');
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<table>
+    <tr>
+        <th width="110" class="thl">服务类型</th>
+        <th width="180">订单编号</th>
+        <th width="93">联系人</th>
+        <th width="104">下单时间</th>
+        <th width="154">店铺名称</th>
+        <th width="85">总金额</th>
+        <th width="100">交易状态</th>
+        <th width="105" class="thr">操作</th>
+    </tr>
+    <tr>
+        <td>安装鱼缸</td>
+        <td>1220462282214287</td>
+        <td>王大锤</td>
+        <td>2015-12-12</td>
+        <td>杭州鱼多吉旗舰店</td>
+        <td><em>¥800.00</em></td>
+        <td><p>待付款</p><a class="more" href="member_order_info_pay.html" title="">订单详情</a></td>
+        <td>
+            <a class="operation" href="javascript:;" title="">立即付款</a>
+            <a class="cancel" href="javascript:;" title="">取消订单</a>
+        </td>
+    </tr>
+    <tr>
+        <td>安装鱼缸</td>
+        <td>1220462282214287</td>
+        <td>王大锤</td>
+        <td>2015-12-12</td>
+        <td>杭州鱼多吉旗舰店</td>
+        <td><em>¥800.00</em></td>
+        <td><p>待服务</p><a class="more" href="member_order_info_service.html" title="">订单详情</a></td>
+        <td><a class="operation" href="member_refund_one.html" title="">申请退款</a></td>
+    </tr>
+    <tr>
+        <td>安装鱼缸</td>
+        <td>1220462282214287</td>
+        <td>王大锤</td>
+        <td>2015-12-12</td>
+        <td>杭州鱼多吉旗舰店</td>
+        <td><em>¥800.00</em></td>
+        <td><p>已派单</p><a class="more" href="member_order_info_had.html" title="">订单详情</a></td>
+        <td><a class="operation" href="member_refund_one.html" title="">申请退款</a></td>
+    </tr>
+    <tr>
+        <td>安装鱼缸</td>
+        <td>1220462282214287</td>
+        <td>王大锤</td>
+        <td>2015-12-12</td>
+        <td>杭州鱼多吉旗舰店</td>
+        <td><em>¥800.00</em></td>
+        <td><p><strong>已完成</strong></p><a class="more" href="member_order_info_finish.html" title="">订单详情</a></td>
+        <td><a class="operation" href="member_complain_one.html" title="">投诉卖家</a></td>
+    </tr>
+    <tr>
+        <td>安装鱼缸</td>
+        <td>1220462282214287</td>
+        <td>王大锤</td>
+        <td>2015-12-12</td>
+        <td>杭州鱼多吉旗舰店</td>
+        <td><em>¥800.00</em></td>
+        <td><p>服务中</p><a class="more" href="member_order_info_ing.html" title="">订单详情</a></td>
+        <td><a class="operation check" href="javascript:;" title="">验收服务</a></td>
+    </tr>
+    <tr>
+        <td>安装鱼缸</td>
+        <td>1220462282214287</td>
+        <td>王大锤</td>
+        <td>2015-12-12</td>
+        <td>杭州鱼多吉旗舰店</td>
+        <td><em>¥800.00</em></td>
+        <td><p>待评价</p><a class="more" href="member_order_info_evaluate.html" title="">订单详情</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>安装鱼缸</td>
+        <td>1220462282214287</td>
+        <td>王大锤</td>
+        <td>2015-12-12</td>
+        <td>杭州鱼多吉旗舰店</td>
+        <td><em>¥800.00</em></td>
+        <td><p><strong>已关闭</strong></p><a class="more" href="member_order_info_close.html" title="">订单详情</a></td>
+        <td><a class="operation" href="member_complain_one.html" title="">投诉卖家</a></td>
+    </tr>
+</table>
+<div class="page">
+    <img src="img/page.jpg" alt="">
+</div>
+
+<script>
+    $('.order-main .con td a.check').on('click',function(){
+        $('.member-mask-bg').css('display','block');
+        $('.member-mask.check').css('display','block');
+    })
+    $('.order-main .con td a.cancel').on('click',function(){
+        $('.member-mask-bg').css('display','block');
+        $('.member-mask.cancel').css('display','block');
+    })
+</script>
+

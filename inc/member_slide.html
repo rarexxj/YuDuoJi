@@ -1,0 +1,32 @@
+<div class="member-slide main-slide fl">
+	<h3><a href="member.html" title="">会员中心</a></h3>
+	<dl>
+		<dd>
+			<a class="first" href="javascript:;" title="">账号管理</a>
+			<div class="f-cb">
+				<ul>
+					<li><a href="member_data.html" title="">我的资料</a></li>
+					<li><a href="member_change.html" title="">修改密码</a></li>
+				</ul>
+			</div>
+		</dd>
+		<dd>
+			<a class="first" href="javascript:;" title="">订单管理</a>
+			<div class="f-cb">
+				<ul>
+					<li><a href="member_order.html" title="">我的订单</a></li>
+					<li><a href="member_refund.html" title="">我的售后</a></li>
+					<li><a href="member_complain.html" title="">我的投诉</a></li>
+				</ul>
+			</div>
+		</dd>
+		<dd>
+			<a class="first" href="seller.html " title="">商家中心</a>
+		</dd>
+	</dl>
+</div>
+<script>
+	$('.main-slide dd .first').click(function(){
+		$(this).parent('dd').find('ul').slideToggle()
+	})
+</script>

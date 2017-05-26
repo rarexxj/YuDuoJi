@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="zh-CN" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>鱼多吉</title>
+<link href="img/favicon.ico" rel="shortcut icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jQuery.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.transit.js"></script>
+  <script src="js/prefixfree.min.js"></script>
+  <script src="js/html5.js"></script>
+  <script src="js/bocfe.js"></script>
+  <script src="js/plug.preload.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shavera.css">
+  <script src="lightbox/jquery.lightbox-0.5.js"></script>
+  <link rel="stylesheet" href="lightbox/jquery.lightbox-0.5.css">
+  <script src="js/main.js"></script>
+<!--[if IE 6]>
+  <?php
+    echo static_file('IE6PNG.js');
+  ?>
+  <script type="text/javascript">
+    IE6PNG.fix('.png');
+  </script>
+<![endif]-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=btdLALhz2PRv8iqW6oT95l6p"></script>
+</head>
+
+<body>
+    <div class="includeDom" include='inc/header.html'></div>
+    <div class="main-bg">
+    	<div class="w1200 f-cb">
+        <div class="includeDom" include='inc/about_slide.html'></div>
+    		<div class="main-right fr">
+    			<div class="join-info f-cb">
+    				<div class="main-title">
+                <h3>联系我们</h3>            
+            </div>
+            <div class="contact-con">
+                <h3>嘉兴鱼多吉水族科技有限公司</h3>
+                <div class="where f-cb">
+                    <ul>
+                        <li>
+                            <p class="p1">电话：0571-888888</p>
+                            <p class="p2">邮箱：yuduoji@XXX.com</p>
+                        </li>
+                        <li><p class="p3">地址：杭州市西湖区文二西路西城广场</p></li>
+                    </ul>
+                </div>
+                <div class="contact-code">
+                    <p>下载鱼多吉APP</p>
+                    <img src="img/contact_code.jpg" width="88" height="88" alt="">
+                </div>
+                <div class="contact-map">
+                    <div style="width:100%;height:415px;font-size:12px" id="map"></div>
+                </div>
+            </div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="includeDom" include='inc/footer.html'></div>
+<script>
+$(function(){
+    $('.header-bot .nav li a:eq(4)').addClass('on');
+
+	// $('.main-slide dd:eq(0) .first').addClass('on');
+	$('.main-slide dd:eq(0) li:eq(2) a').addClass('on');
+	// $('.main-slide dd:eq(0) ul').css('display','block');
+
+})
+</script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      //addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(120.103084,30.286324),17);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"地址：杭州市西湖区文二西路西城广场",title:"嘉兴鱼多吉水族科技有限公司",imageOffset: {width:-46,height:-21},position:{lat:30.286979,lng:120.102276}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+</body>
+</html>

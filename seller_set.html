@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="zh-CN" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>鱼多吉</title>
+<link href="img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jQuery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/bocfe.js"></script>
+    <script src="js/plug.preload.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shavera.css">
+    <script src="lightbox/jquery.lightbox-0.5.js"></script>
+    <link rel="stylesheet" href="lightbox/jquery.lightbox-0.5.css">
+    <script src="js/main.js"></script>
+    <script src="js/laydate.js"></script>
+<!--[if IE 6]>
+    <?php
+        echo static_file('IE6PNG.js');
+    ?>
+    <script type="text/javascript">
+        IE6PNG.fix('.png');
+    </script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="includeDom" include='inc/header.html'></div>
+    <div class="main-bg">
+        <div class="w1200 f-cb">
+            <div class="includeDom" include='inc/seller_slide.html'></div>
+            <div class="main-right fr">
+                <div class="order-main member-main seller-order">
+                    <div class="main-title">
+                        <h3>店铺设置</h3>
+                    </div>
+                    <div class="store-set">
+                        <form action="">
+                            <div class="f-cb">
+                                <ul>
+                                    <li><p>店铺名：</p><div class="right fl"><strong>杭州鱼多吉旗舰店</strong></div></li>
+                                    <li><p>服务范围：</p><div class="right fl"><strong>杭州市</strong></div></li>
+                                    <li><p>主营商品：</p><div class="right fl"><input type="text"></div></li>
+                                    <li><p>店铺简介：</p><div class="right fl"><textarea name="" id=""></textarea></div></li>
+                                    <li><p>电话：</p><div class="right fl"><input type="text"></div></li>
+                                    <li><p>地址：</p><div class="right fl"><input type="text"></div></li>
+                                    <li>
+                                        <p>店铺LOGO：</p>
+                                        <div class="right fl">
+                                            <img src="img/seller_img.jpg" width="169" height="129" alt="">
+                                            <h5>此处理店铺页logo，建议使用宽200像素-高60像素内的GIF或PNG透明图片；点击下方"提交"按钮后生效。</h5>
+                                            <a class="up" href="javascript:;" title="">上传图片</a>
+                                            <input class="file" type="file">
+                                        </div>
+                                    </li>
+                                    <li><p>商品分类：</p><div class="right fl"><input type="text" placeholder="泗海龙源，其他"><h5>输入后用逗号隔开</h5></div></li>
+                                    <li>
+                                        <p>商家环境图：</p>
+                                        <div class="right fl">
+                                            <div class="img f-cb">
+                                                <ol>
+                                                    <li><img src="img/fish_img.jpg" width="146" height="133" alt=""></li>
+                                                    <li><img src="img/fish_img.jpg" width="146" height="133" alt=""></li>
+                                                    <li><img src="img/fish_img.jpg" width="146" height="133" alt=""></li>
+                                                    <li><img src="img/fish_img.jpg" width="146" height="133" alt=""></li>
+                                                    <li><img src="img/fish_img.jpg" width="146" height="133" alt=""></li>
+                                                </ol>
+                                            </div>
+                                            <a class="up" href="javascript:;" title="">上传图片</a>
+                                            <input class="file" type="file">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input class="submit" type="submit" value="提交">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="member-mask-bg"></div>
+    <div class="member-mask bill-mask reg-mask">
+        <a class="close" href="javascript:;" title=""></a>
+        <h3>设置成功！</h3>
+        <p>3秒后自动刷新...</p>
+        <div class="link">
+            <a class="sure" href="seller_set.html" title="">确定</a>
+        </div>
+    </div>
+    <div class="includeDom" include='inc/footer.html'></div>
+<script>
+$(function(){
+    $('.main-slide dd:eq(0) .first').addClass('on');
+    $('.main-slide dd:eq(0) li:eq(0) a').addClass('on');
+    $('.main-slide dd:eq(0) ul').css('display','block');
+
+    $('.store-set li a.up').click(function(){
+        $(this).next('.file').click();
+    })
+
+    $('form').submit(function(){
+        $('.member-mask-bg').css('display','block');
+        $('.member-mask').css('display','block');
+        setTimeout(function(){
+            window.location.href="seller_set.html"; 
+        },3000)
+        return false;
+    })
+    
+    $('.member-mask .close').click(function(){
+        $('.member-mask-bg').css('display','none');
+        $('.member-mask').css('display','none');
+    })
+
+})
+</script>
+</body>
+</html>
